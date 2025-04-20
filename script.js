@@ -37,42 +37,21 @@ window.onscroll = () => {
     navbar.classList.remove('active');
 }
 
-var swiper = new Swiper(".product-slider", {
-    loop:true,
-    spaceBetween: 20,
-    autoplay:{
-        delay: 7500,
-        disableOnInteraction: false,
-    },
-    breakpoints: {
-      0: {
-        slidesPerView: 1,
-      },
-      768: {
-        slidesPerView: 2,
-      },
-      1024: {
-        slidesPerView: 3,
-      },
-    },
-  });
+let currentIndex = 0;
 
-var swiper = new Swiper(".review-slider", {
-    loop:true,
-    spaceBetween: 20,
-    autoplay:{
-        delay: 7500,
-        disableOnInteraction: false,
-    },
-    breakpoints: {
-      0: {
-        slidesPerView: 1,
-      },
-      768: {
-        slidesPerView: 1,
-      },
-      1024: {
-        slidesPerView: 1,
-      },
-    },
-  });
+function moveSlide(direction) {
+  const track = document.getElementById("carousel-track");
+  const totalSlides = track.children.length;
+
+  currentIndex += direction;
+
+  if (currentIndex < 0) {
+    currentIndex = totalSlides - 1;
+  } else if (currentIndex >= totalSlides) {
+    currentIndex = 0;
+  }
+
+  const slideWidth = track.offsetWidth;
+
+  track.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
+}

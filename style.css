@@ -513,12 +513,14 @@ header .login-form.active{
 }
 
 .categories .box-container .box a {
-    font-size: 15px;
-    text-decoration: none;
-    color: var(--black);
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
     border: 2px solid #333;
-    border-radius: 5px;
-    padding: 5px 10px;
+    font-size: 14px;
+    color: #333;
+    border-radius: .3rem;
+    text-decoration: none;
+    font-weight: bold
 }
 
 
@@ -526,3 +528,108 @@ header .login-form.active{
     background:var(--orange);
     
 }
+
+.review {
+    background: #eee;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .review .heading {
+    font-size: 30px;
+    margin-top: 35px;
+    margin-bottom: 50px;
+  }
+  
+  .review .heading span {
+    color: #fff;
+    background: var(--orange);
+    padding: 0.5rem 3rem;
+    display: inline-block;
+    clip-path: polygon(100% 0px, 93% 50%, 100% 99%, 0% 100%, 7% 50%, 0% 0%);
+  }
+  
+  /* Carousel container */
+  .carousel {
+    position: relative;
+    overflow: hidden;
+    height: auto; /* or set a min-height like 300px */
+  }
+  
+  
+  /* Track */
+  .review-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  
+  /* Each review box */
+  .review-box {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 2rem;
+    background: #fff;
+    margin: 0 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .review-box img {
+    height: 15rem;
+    border-radius: 20px;
+    margin-bottom: 1rem;
+  }
+  
+  .review-box p {
+    font-size: 1.7rem;
+    color: #333;
+    padding: 1rem 0;
+  }
+  
+  .review-box .name {
+    font-style: italic;
+    font-size: 1.7rem;
+  }
+  
+  .review-box .star {
+    color: var(--orange);
+    font-size: 20px;
+  }
+  
+  /* Buttons */
+  .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--orange);
+    color: white;
+    border: none;
+    padding: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+    opacity: 0.8;
+  }
+  
+  .carousel-btn:hover {
+    opacity: 1;
+  }
+  
+  .carousel-btn.prev {
+    left: 10px;
+  }
+  
+  .carousel-btn.next {
+    right: 10px;
+  }
+
+  .review-container .review-box {
+    min-width: 100%; /* Make each review take full carousel width */
+    box-sizing: border-box;
+  }
+  
+  
