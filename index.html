@@ -27,6 +27,7 @@
             <a href="#categories">Categories</a>
             <a href="#review">Review</a>
             <a href="#blogs">Blogs</a>
+            <a href="contact.html">Contact</a>
         </nav>
 
         <div class="icons">
@@ -326,35 +327,7 @@
             <button class="nav-btn next-btn"><i class="fas fa-chevron-right"></i></button>
         </div>
     </section>
-    <script>
-        const slider = document.querySelector('.review-slider');
-        const prevBtn = document.querySelector('.prev-btn');
-        const nextBtn = document.querySelector('.next-btn');
-        let currentIndex = 0;
-        const totalReviews = 3;
-        const slideWidth = 100 / totalReviews;
-
-        function updateSlider() {
-            slider.style.transform = `translateX(-${currentIndex * slideWidth}%)`;
-        }
-
-        nextBtn.addEventListener('click', () => {
-            currentIndex = (currentIndex + 1) % totalReviews;
-            updateSlider();
-        });
-
-        prevBtn.addEventListener('click', () => {
-            currentIndex = (currentIndex - 1 + totalReviews) % totalReviews;
-            updateSlider();
-        });
-
-        // Optional auto-slide
-        setInterval(() => {
-            currentIndex = (currentIndex + 1) % totalReviews;
-            updateSlider();
-        }, 5000);
-    </script>
-
+    
     <section class="blogs" id="blogs">
         <h1 class="heading">Our <span>Blogs</span></h1>
         <div class="box-container">
