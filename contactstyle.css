@@ -435,6 +435,7 @@ footer{
   label {
     display: block;
     margin-bottom: 8px;
+    color: black;
     font-weight: 600;
   }
   
@@ -472,7 +473,6 @@ footer{
   
   input[type="submit"] {
     background: #3a86ff;
-    color: #fff;
     padding: 14px 28px;
     border: none;
     border-radius: 8px;
