@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Groco Navbar Skeleton</title>
+
+  <!-- Fonts and Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="stylelogin.css">
+  <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+  <!-- Header / Navbar Skeleton -->
+  <header class="header">
+    <a href="index.html#home" class="logo"><i class="fas fa-shopping-basket"></i> GROCO</a>
+
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="index.html#features">Features</a>
+      <a href="index.html#products">Products</a>
+      <a href="index.html#categories">Categories</a>
+      <a href="index.html#review">Review</a>
+      <a href="index.html#blogs">Blogs</a>
+    </nav>
+
+    <div class="icons">
+      <div class="fas fa-bars" id="menu-btn"></div>
+      <div class="fas fa-search" id="search-btn"></div>
+      <div class="fas fa-shopping-cart" id="cart-btn"></div>
+      <div class="fas fa-user" id="login-btn"></div>
+    </div>
+
+    <!-- Search Form -->
+    <form action="" class="search-form">
+      <input type="search" id="search-box" placeholder="Search here...">
+      <label for="search-box" class="fas fa-search"></label>
+    </form>
+
+    <!-- Shopping Cart -->
+    <div class="shopping-cart">
+      <div class="total">Total: ₹0/-</div>
+      <a href="#" class="btn">Checkout</a>
+    </div>
+
+    <!-- Login Form -->
+    <form action="" class="login-form">
+      <h3>Login now</h3>
+      <input type="email" class="box" placeholder="your email">
+      <input type="password" class="box" placeholder="password">
+      <p>forgot password ? <a href="#" class="links">click here</a></p>
+      <p>Don't have an account ? <a href="#" class="links">click here</a></p>
+      <input type="submit" value="login now" class="btn">
+    </form>
+  </header>
+
+  <!-- Login and Signup Section -->
+  <section class="container forms">
+    <div class="form login">
+      <div class="form-content">
+        <header>Login</header>
+        <form action="#">
+          <div class="field input-field">
+            <input type="email" placeholder="Email" class="input">
+          </div>
+          <div class="field input-field">
+            <input type="password" placeholder="Password" class="password">
+            <i class='bx bx-hide eye-icon'></i>
+          </div>
+          <div class="form-link">
+            <a href="#" class="forgot-pass">Forgot password?</a>
+          </div>
+          <div class="field button-field">
+            <button>Login</button>
+          </div>
+        </form>
+        <div class="form-link">
+          <span>Don't have an account? <a href="#" class="link signup-link">Signup</a></span>
+        </div>
+      </div>
+      <div class="line"></div>
+      <div class="media-options">
+        <a href="#" class="field facebook">
+          <i class='bx bxl-facebook facebook-icon'></i>
+          <span>Login with Facebook</span>
+        </a>
+      </div>
+      <div class="media-options">
+        <a href="#" class="field google">
+          <img src="images/google.png" alt="" class="google-img">
+          <span>Login with Google</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Signup Form -->
+    <div class="form signup">
+      <div class="form-content">
+        <header>Signup</header>
+        <form action="#">
+          <div class="field input-field">
+            <input type="email" placeholder="Email" class="input">
+          </div>
+          <div class="field input-field">
+            <input type="password" placeholder="Create password" class="password">
+          </div>
+          <div class="field input-field">
+            <input type="password" placeholder="Confirm password" class="password">
+            <i class='bx bx-hide eye-icon'></i>
+          </div>
+          <div class="field button-field">
+            <button>Signup</button>
+          </div>
+        </form>
+        <div class="form-link">
+          <span>Already have an account? <a href="#" class="link login-link">Login</a></span>
+        </div>
+      </div>
+      <div class="line"></div>
+      <div class="media-options">
+        <a href="#" class="field facebook">
+          <i class='bx bxl-facebook facebook-icon'></i>
+          <span>Login with Facebook</span>
+        </a>
+      </div>
+      <div class="media-options">
+        <a href="#" class="field google">
+          <img src="images/google.png" alt="Google" class="google-img">
+          <span>Login with Google</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <script src="scriptlogin.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js" integrity="sha512-4+0v1x5Xk3g5j8J9mZ" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>
