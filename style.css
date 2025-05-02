@@ -532,12 +532,24 @@ header .login-form.active{
 .review {
     background: #eee;
     padding: 2rem 2rem;
- }
- .review .review-container{
-    background: #eee;;
-    margin-top: 2rem;
+    position: relative;
 }
-.review .review-container .review-box{
+
+.review .review-container {
+    background: #eee;
+    margin-top: 2rem;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.review .review-slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 300%;
+}
+
+.review .review-container .review-box {
     padding: 2rem 1rem;
     border-radius: 0.5rem;
     background: #fff;
@@ -545,41 +557,54 @@ header .login-form.active{
     outline: var(--outline);
     outline-offset: -1rem;
     text-align: center;
+    margin: 0 1rem;
+    width: calc(100% / 3);
+    flex-shrink: 0;
     margin-bottom: 10px;
- }
- .review .review-container .review-box:hover{
-     outline: var(--outline-hover);
-     outline-offset: 0rem;
- }
+}
 
- .review .review-container .review-box img{
+.review .review-container .review-box:hover {
+    outline: var(--outline-hover);
+    outline-offset: 0rem;
+}
+
+.review .review-container .review-box img {
     margin: 1rem 0;
     height: 15rem;
     border-radius: 20px;
 }
-.review .review-container .review-box h3{
+
+.review .review-container .review-box h3 {
     font-size: 2rem;
     color: var(--black);
     line-height: 1.8;
 }
-.review .review-container .review-box p{
+
+.review .review-container .review-box p {
     font-size: 1.7rem;
     color: var(--black);
-    line-height:1.8;
+    line-height: 1.8;
     padding: 1rem 0;
 }
 
-.review .review-container .review-box .name{
+.review .review-container .review-box .name {
     font-size: 1.7rem;
     color: var(--black);
     font-style: italic;
-    line-height:1.8;
+    line-height: 1.8;
     padding: 1rem 0;
 }
 
 .review .review-container .review-box .star {
     font-size: 20px;
     color: var(--orange);
+}
+
+.review .heading {
+    font-size: 30px;
+    margin-top: 35px;
+    margin-bottom: 50px;
+    text-align: center;
 }
 
 .review .heading span {
@@ -590,13 +615,25 @@ header .login-form.active{
     padding: 0.5rem 3rem;
 }
 
+.review .nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #fff;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    box-shadow: var(--box-shadow);
+    z-index: 10;
+}
 
+.review .prev-btn {
+    left: 1rem;
+}
 
-.review .heading {
-    font-size: 30px;
-    margin-top:35px;
-    margin-bottom: 50px;
-    text-align: center;
+.review .next-btn {
+    right: 1rem;
 }
 
 .blogs .box-container{
